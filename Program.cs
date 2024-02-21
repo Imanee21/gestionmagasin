@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
-using System.Data;
 
 namespace GestionMagasins
 {
