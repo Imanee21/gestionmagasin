@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DWConfiguration" Class="dbContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ROMERROLAPTOP\ROMERROSERVER;Initial Catalog=DWConfiguration;User ID=sa" SettingsObjectName="GestionMagasins.Properties.Settings" SettingsPropertyName="DWConfigurationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Magasin1" Member="Magasin1">
+    <Type Name="Magasin1">
+      <Column Name="Id_magasin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Intitulé" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ville" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Magasin1_Ass_mag_resp" Member="Ass_mag_resp" ThisKey="Id_magasin" OtherKey="id_mag" Type="Ass_mag_resp" />
+      <Association Name="Magasin1_Art_Stock" Member="Art_Stock" ThisKey="Id_magasin" OtherKey="Id_magasin" Type="Art_Stock" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Responsable1" Member="Responsable1">
+    <Type Name="Responsable1">
+      <Column Name="Id_resp" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nom_resp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Prenom_resp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CIN" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Date_naissance" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Pays" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Responsable1_Ass_mag_resp" Member="Ass_mag_resp" ThisKey="Id_resp" OtherKey="id_resp" Type="Ass_mag_resp" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ass_mag_resp" Member="Ass_mag_resp">
+    <Type Name="Ass_mag_resp">
+      <Column Name="id_resp" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_mag" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Magasin1_Ass_mag_resp" Member="Magasin1" ThisKey="id_mag" OtherKey="Id_magasin" Type="Magasin1" IsForeignKey="true" />
+      <Association Name="Responsable1_Ass_mag_resp" Member="Responsable1" ThisKey="id_resp" OtherKey="Id_resp" Type="Responsable1" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fournisseur" Member="Fournisseur">
+    <Type Name="Fournisseur">
+      <Column Name="Id_four" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nom_four" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Prenom_four" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Cin" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Pays" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Ville" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Adresse" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Delai_livraison" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="[N°Fournisseur]" Member="N_Fournisseur" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Fournisseur_bon_commande" Member="bon_commande" ThisKey="Id_four" OtherKey="Id_four" Type="bon_commande" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bon_livraison" Member="bon_livraison">
+    <Type Name="bon_livraison">
+      <Column Name="id_livraison" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date_livraison" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="observation" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="id_commande" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="code_livraison" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="bon_livraison_BLSuite" Member="BLSuite" ThisKey="id_livraison" OtherKey="id_livraison" Type="BLSuite" />
+      <Association Name="bon_livraison_bon_retour" Member="bon_retour" ThisKey="id_livraison" OtherKey="Id_livraison" Type="bon_retour" />
+      <Association Name="bon_commande_bon_livraison" Member="bon_commande" ThisKey="id_commande" OtherKey="id_commande" Type="bon_commande" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Article1" Member="Article1">
+    <Type Name="Article1">
+      <Column Name="Id_Article" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Intitule" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Qte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_famille" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_magasin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Unite_achat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Unite_vente" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mode_Stock" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prix_achat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="code_article" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Article1_detail_BC2" Member="detail_BC2" ThisKey="Id_Article" OtherKey="Id_Article" Type="detail_BC2" />
+      <Association Name="Famille1_Article1" Member="Famille1" ThisKey="Id_famille" OtherKey="Id_famille" Type="Famille1" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bon_commande" Member="bon_commande">
+    <Type Name="bon_commande">
+      <Column Name="id_commande" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="numero_commande" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="date_livraison" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="date_echeance" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="date_bc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="mode_reglement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="observation" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="reference" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="etat_livraison" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Id_four" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="bon_commande_bon_livraison" Member="bon_livraison" ThisKey="id_commande" OtherKey="id_commande" Type="bon_livraison" />
+      <Association Name="bon_commande_Table_1" Member="Table_1" ThisKey="id_commande" OtherKey="Id_commande" Type="Table_1" />
+      <Association Name="bon_commande_totalprix" Member="totalprix" ThisKey="id_commande" OtherKey="Id_commande" Type="totalprix" />
+      <Association Name="bon_commande_detail_BC2" Member="detail_BC2" ThisKey="id_commande" OtherKey="Id_commande" Type="detail_BC2" />
+      <Association Name="Fournisseur_bon_commande" Member="Fournisseur" ThisKey="Id_four" OtherKey="Id_four" Type="Fournisseur" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Art_Stock" Member="Art_Stock">
+    <Type Name="Art_Stock">
+      <Column Name="Id_ligne" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Article" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_magasin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Unite_achat" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Unite_vente" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mode_Stock" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Prix_achat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="code_article" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Art_Stock_detail_BS" Member="detail_BS" ThisKey="Id_ligne" OtherKey="Id_stock" Type="detail_BS" />
+      <Association Name="Magasin1_Art_Stock" Member="Magasin1" ThisKey="Id_magasin" OtherKey="Id_magasin" Type="Magasin1" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Famille1" Member="Famille1">
+    <Type Name="Famille1">
+      <Column Name="Id_famille" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Intitule" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code_Famille" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Famille1_Article1" Member="Article1" ThisKey="Id_famille" OtherKey="Id_famille" Type="Article1" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_1" Member="Table_1">
+    <Type Name="Table_1">
+      <Column Name="Id_delai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_commande" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remarque" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="bon_commande_Table_1" Member="bon_commande" ThisKey="Id_commande" OtherKey="id_commande" Type="bon_commande" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.totalprix" Member="totalprix">
+    <Type Name="totalprix">
+      <Column Name="id_montant" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_commande" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Prix_Ht" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Taxe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="bon_commande_totalprix" Member="bon_commande" ThisKey="Id_commande" OtherKey="id_commande" Type="bon_commande" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BLSuite" Member="BLSuite">
+    <Type Name="BLSuite">
+      <Column Name="idbl" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Qte_livrée" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_detail" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_livraison" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Intitulee" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Prix" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Montant" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="BLSuite_BCsuite" Member="BCsuite" ThisKey="idbl" OtherKey="id_dbl" Type="BCsuite" />
+      <Association Name="bon_livraison_BLSuite" Member="bon_livraison" ThisKey="id_livraison" OtherKey="id_livraison" Type="bon_livraison" IsForeignKey="true" />
+      <Association Name="detail_BC2_BLSuite" Member="detail_BC2" ThisKey="id_detail" OtherKey="Id_detail" Type="detail_BC2" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BCsuite" Member="BCsuite">
+    <Type Name="BCsuite">
+      <Column Name="id_dbr" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_dbl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_bonretour" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Intitule" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="qte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prix" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BLSuite_BCsuite" Member="BLSuite" ThisKey="id_dbl" OtherKey="idbl" Type="BLSuite" IsForeignKey="true" />
+      <Association Name="bon_retour_BCsuite" Member="bon_retour" ThisKey="id_bonretour" OtherKey="Id_bonretour" Type="bon_retour" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bon_retour" Member="bon_retour">
+    <Type Name="bon_retour">
+      <Column Name="Id_bonretour" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_livraison" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_retour" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="observation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="n_bonretour" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Nom_fournisseur" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Ref_fournisseur" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CIN" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="bon_retour_BCsuite" Member="BCsuite" ThisKey="Id_bonretour" OtherKey="id_bonretour" Type="BCsuite" />
+      <Association Name="bon_livraison_bon_retour" Member="bon_livraison" ThisKey="Id_livraison" OtherKey="id_livraison" Type="bon_livraison" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detail_BC2" Member="detail_BC2">
+    <Type Name="detail_BC2">
+      <Column Name="Id_detail" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Article" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_four" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Prix_Ht" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_commande" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="detail_BC2_BLSuite" Member="BLSuite" ThisKey="Id_detail" OtherKey="id_detail" Type="BLSuite" />
+      <Association Name="Article1_detail_BC2" Member="Article1" ThisKey="Id_Article" OtherKey="Id_Article" Type="Article1" IsForeignKey="true" />
+      <Association Name="bon_commande_detail_BC2" Member="bon_commande" ThisKey="Id_commande" OtherKey="id_commande" Type="bon_commande" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAdmin" Member="tblAdmin">
+    <Type Name="tblAdmin">
+      <Column Name="Id_admin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nom_admin" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mot_de_passe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bon_sortie" Member="bon_sortie">
+    <Type Name="bon_sortie">
+      <Column Name="id_bonsortie" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code_bonsortie" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="observation" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="date_sortie" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Id_magasin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="bon_sortie_detail_BS" Member="detail_BS" ThisKey="id_bonsortie" OtherKey="Id_bonsortie" Type="detail_BS" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detail_BS" Member="detail_BS">
+    <Type Name="detail_BS">
+      <Column Name="id_dbs" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_bonsortie" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Qte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Montant" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Prix" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_Article" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Art_Stock_detail_BS" Member="Art_Stock" ThisKey="Id_stock" OtherKey="Id_ligne" Type="Art_Stock" IsForeignKey="true" />
+      <Association Name="bon_sortie_detail_BS" Member="bon_sortie" ThisKey="Id_bonsortie" OtherKey="id_bonsortie" Type="bon_sortie" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
