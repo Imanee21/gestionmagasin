@@ -4,24 +4,44 @@ i:{00000000-0000-0000-0000-000000000000}:GestionMagasins.sln
 i:{00000000-0000-0000-0000-000000000000}:GestionMagasins
 ++Properties
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\
+++DataSources
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\
+++Art_Stock.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\art_stock.datasource
+++BCsuite.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\bcsuite.datasource
+++BLSuite.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\blsuite.datasource
+++bon_livraison.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\bon_livraison.datasource
+++Bon_livraison1.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\bon_livraison1.datasource
+++detail_BC.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detail_bc.datasource
+++detail_BC1.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detail_bc1.datasource
+++detail_BC2.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detail_bc2.datasource
+++detail_BS.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detail_bs.datasource
+++DetailBL.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detailbl.datasource
+++DroitUserMagasin.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\droitusermagasin.datasource
+++Famille1.datasource
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\famille1.datasource
+++AssemblyInfo.cs
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\assemblyinfo.cs
+++licenses.licx
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\licenses.licx
+++Resources.resx
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\resources.resx
+++Settings.settings
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\settings.settings
 ++References
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:
 ++Resources
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\
-++5172991_internet_lock_locked_padlock_password_icon.png
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\5172991_internet_lock_locked_padlock_password_icon.png
-++73221_base_latte_login_social_entrance_icon (1).png
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\73221_base_latte_login_social_entrance_icon (1).png
-++73221_base_latte_login_social_entrance_icon.png
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\73221_base_latte_login_social_entrance_icon.png
-++73221_base_latte_login_social_entrance_icon1.png
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\73221_base_latte_login_social_entrance_icon1.png
-++87402_admin_icon.png
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\87402_admin_icon.png
-++Screenshot 2023-05-23 184718.png
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\screenshot 2023-05-23 184718.png
-++Screenshot 2023-05-24 014215.png
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\screenshot 2023-05-24 014215.png
 ++api.cs
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\api.cs
 ++app.config
@@ -84,16 +104,10 @@ i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gesti
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\xtraform1.cs
 ++XtraUserControl1.cs
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\xtrausercontrol1.cs
-++DataSources
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\
-++AssemblyInfo.cs
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\assemblyinfo.cs
-++licenses.licx
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\licenses.licx
-++Resources.resx
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\resources.resx
-++Settings.settings
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\settings.settings
+++Resources.Designer.cs
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\resources.designer.cs
+++Settings.Designer.cs
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\settings.designer.cs
 ++Accessibility
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:
 ++Dapper
@@ -210,6 +224,20 @@ i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:
 ++WindowsBase
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:
+++5172991_internet_lock_locked_padlock_password_icon.png
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\5172991_internet_lock_locked_padlock_password_icon.png
+++73221_base_latte_login_social_entrance_icon (1).png
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\73221_base_latte_login_social_entrance_icon (1).png
+++73221_base_latte_login_social_entrance_icon.png
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\73221_base_latte_login_social_entrance_icon.png
+++73221_base_latte_login_social_entrance_icon1.png
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\73221_base_latte_login_social_entrance_icon1.png
+++87402_admin_icon.png
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\87402_admin_icon.png
+++Screenshot 2023-05-23 184718.png
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\screenshot 2023-05-23 184718.png
+++Screenshot 2023-05-24 014215.png
+i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\resources\screenshot 2023-05-24 014215.png
 ++dbContext.cs
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\dbcontext.cs
 ++dbContext.dbml.layout
@@ -318,31 +346,3 @@ i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gesti
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\xtraform1.resx
 ++XtraUserControl1.Designer.cs
 i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\xtrausercontrol1.designer.cs
-++Art_Stock.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\art_stock.datasource
-++BCsuite.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\bcsuite.datasource
-++BLSuite.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\blsuite.datasource
-++bon_livraison.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\bon_livraison.datasource
-++Bon_livraison1.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\bon_livraison1.datasource
-++detail_BC.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detail_bc.datasource
-++detail_BC1.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detail_bc1.datasource
-++detail_BC2.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detail_bc2.datasource
-++detail_BS.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detail_bs.datasource
-++DetailBL.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\detailbl.datasource
-++DroitUserMagasin.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\droitusermagasin.datasource
-++Famille1.datasource
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\datasources\famille1.datasource
-++Resources.Designer.cs
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\resources.designer.cs
-++Settings.Designer.cs
-i:{b785711b-33cd-4d67-b45a-0f98bdfaeadd}:c:\users\hp\source\repos\imanee21\gestionmagasin\properties\settings.designer.cs

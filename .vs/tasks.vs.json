@@ -5,6 +5,11 @@
       "taskLabel": "task-gestionmagasin",
       "appliesTo": "/",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-gestionmagasin",
+      "appliesTo": "/",
+      "type": "launch"
     }
   ]
 }
